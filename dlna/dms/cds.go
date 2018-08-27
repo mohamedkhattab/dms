@@ -58,10 +58,10 @@ func (me *contentDirectoryService) cdsObjectToUpnpavObject(cdsObject object, fil
 	if err != nil {
 		return
 	}
-	if !mimeType.IsMedia() {
-		log.Printf("%s ignored: non-media file (%s)", cdsObject.FilePath(), mimeType)
-		return
-	}
+	// if !mimeType.IsMedia() {
+	// 	log.Printf("%s ignored: non-media file (%s)", cdsObject.FilePath(), mimeType)
+	// 	return
+	// }
 	iconURI := (&url.URL{
 		Scheme: "http",
 		Host:   host,
