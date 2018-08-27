@@ -18,8 +18,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/anacrolix/dms/dlna/dms"
-	"github.com/anacrolix/dms/rrcache"
+	"github.com/mohamedkhattab/dms/dlna/dms"
+	"github.com/mohamedkhattab/dms/rrcache"
 )
 
 type dmsConfig struct {
