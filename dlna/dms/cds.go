@@ -58,7 +58,7 @@ func (me *contentDirectoryService) cdsObjectToUpnpavObject(cdsObject object, fil
 	if err != nil {
 		return
 	}
-	if !mimeType.IsMedia() {
+	if !mimeType.IsMedia() && !(mimeTypeByBaseName(mimeType) == "srt") {
 		log.Printf("%s ignored: non-media file (%s)", cdsObject.FilePath(), mimeType)
 		return
 	}
