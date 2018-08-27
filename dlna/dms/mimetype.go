@@ -23,7 +23,7 @@ type mimeType string
 
 // IsMedia returns true for media MIME-types
 func (mt mimeType) IsMedia() bool {
-	return mt.IsVideo() || mt.IsAudio() || mt.IsImage()
+	return mt.IsVideo() || mt.IsAudio() || mt.IsImage() || mt.IsText()
 }
 
 // IsVideo returns true for video MIME-types
@@ -39,6 +39,10 @@ func (mt mimeType) IsAudio() bool {
 // IsImage returns true for image MIME-types
 func (mt mimeType) IsImage() bool {
 	return strings.HasPrefix(string(mt), "image/")
+}
+
+func (mt mimeType) IsText() bool {
+	return strings.HasPrefix(string(mt), "text/")
 }
 
 // Returns the group "type", the part before the '/'.
