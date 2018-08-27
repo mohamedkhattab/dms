@@ -12,11 +12,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/anacrolix/dms/dlna"
-	"github.com/anacrolix/dms/misc"
-	"github.com/anacrolix/dms/upnp"
-	"github.com/anacrolix/dms/upnpav"
 	"github.com/anacrolix/ffprobe"
+	"github.com/mohamedkhattab/dms/dlna"
+	"github.com/mohamedkhattab/dms/misc"
+	"github.com/mohamedkhattab/dms/upnp"
+	"github.com/mohamedkhattab/dms/upnpav"
 )
 
 type contentDirectoryService struct {
@@ -58,10 +58,10 @@ func (me *contentDirectoryService) cdsObjectToUpnpavObject(cdsObject object, fil
 	if err != nil {
 		return
 	}
-	// if !mimeType.IsMedia() {
-	// 	log.Printf("%s ignored: non-media file (%s)", cdsObject.FilePath(), mimeType)
-	// 	return
-	// }
+	if !mimeType.IsMedia() {
+		log.Printf("%s ignored: non-media file (%s)", cdsObject.FilePath(), mimeType)
+		return
+	}
 	iconURI := (&url.URL{
 		Scheme: "http",
 		Host:   host,

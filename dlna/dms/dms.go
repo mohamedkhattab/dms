@@ -21,13 +21,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/anacrolix/dms/dlna"
-	"github.com/anacrolix/dms/soap"
-	"github.com/anacrolix/dms/ssdp"
-	"github.com/anacrolix/dms/transcode"
-	"github.com/anacrolix/dms/upnp"
-	"github.com/anacrolix/dms/upnpav"
 	"github.com/anacrolix/ffprobe"
+	"github.com/mohamedkhattab/dms/dlna"
+	"github.com/mohamedkhattab/dms/soap"
+	"github.com/mohamedkhattab/dms/ssdp"
+	"github.com/mohamedkhattab/dms/transcode"
+	"github.com/mohamedkhattab/dms/upnp"
+	"github.com/mohamedkhattab/dms/upnpav"
 )
 
 const (
